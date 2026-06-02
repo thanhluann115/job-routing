@@ -7,31 +7,35 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const { login } = useAuth();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
- const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  console.log("username =", username);
-  console.log("password =", password);
+    console.log("username =", username);
+    console.log("password =", password);
 
-  const success = login(
-    username,
-    password
-  );
+    const success = login(username, password);
 
-  console.log("success =", success);
+    console.log("success =", success);
 
-  if (success) {
-    navigate("/");
-  } else {
-    alert("Sai tài khoản hoặc mật khẩu");
-  }
-};
+    if (success) {
+      navigate("/");
+    } else {
+      alert("Sai tài khoản hoặc mật khẩu");
+    }
+  };
 
   return (
     <div className="login-overlay">
       <form className="login-modal" onSubmit={handleSubmit}>
+        <button
+          type="button"
+          className="close-btn"
+          onClick={() => navigate("/")}
+        >
+          ✕
+        </button>
         <div className="login-icon">🔒</div>
 
         <h2 className="login-title">Đăng nhập</h2>
