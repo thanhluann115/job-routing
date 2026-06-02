@@ -3,8 +3,6 @@ import { getData } from "../api/jobsApi";
 import JobCard from "../components/JobCard";
 import { useSearchParams } from "react-router-dom";
 import JobModal from "../components/JobModal";
-import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [jobs, setJobs] = useState([]);
@@ -12,9 +10,7 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const jobsPerPage = 5;
   const [selectedJob, setSelectedJob] = useState(null);
-  const { user } = useAuth();
-  const navigate = useNavigate();
-
+ 
   const keyword = searchParams.get("q") || "";
 
   useEffect(() => {
