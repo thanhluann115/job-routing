@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background: linear-gradient(
+    90deg,
+    #111,
+    #2b2b2b
+  );
+
+  height: 56px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.jobs-grid {
+  width: 90%;
+  margin: 40px auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.job-card {
+  background: #333;
+
+  border-radius: 8px;
+
+  padding: 18px;
+
+  box-shadow:
+    0 5px 20px
+    rgba(0, 0, 0, .4);
+}
+
+.skill-tag {
+  display: inline-block;
+
+  background: #e74c3c;
+
+  color: white;
+
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  margin-right: 5px;
+
+  margin-bottom: 5px;
+
+  font-size: 11px;
+}
+
+.view-btn {
+  background: #f5a623;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 4px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+.job-card {
+  background: #2c2c2c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.4);
+}
+
+.job-title {
+  border-bottom: 1px solid #555;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 4px 8px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.view-btn {
+  background: #f5a623;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-modal {
+  width: 450px;
+  background: #2c2c2c;
+  color: white;
+
+  padding: 30px;
+  border-radius: 10px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+}
+
+.login-modal input {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-modal button {
+  background: #e74c3c;
   color: white;
+  border: none;
+
+  padding: 12px;
+  cursor: pointer;
+}
+.login-modal{
+  width:500px;
+  background:#2c2c2c;
+  color:white;
+  padding:40px;
+  border-radius:10px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-title{
+  text-align:center;
+  margin-bottom:20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-icon{
+  width:60px;
+  height:60px;
+  margin:0 auto 20px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:#e74c3c;
+  border-radius:50%;
+  font-size:28px;
+}
+
+.login-modal label{
+  display:block;
+  margin-bottom:8px;
+  color:#ddd;
+}
+
+.login-modal input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:5px;
+  border:1px solid #555;
+}
+
+.login-links{
+  margin-top:20px;
+  display:flex;
+  justify-content:space-between;
+  color:#e74c3c;
+  font-size:14px;
 }
